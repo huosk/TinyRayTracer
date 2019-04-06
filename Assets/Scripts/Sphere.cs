@@ -2,8 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public interface IRayIntersect
+{
+    bool RayIntersect(Vector3 origin, Vector3 dir, ref float t);
+}
+
 [System.Serializable]
-public class Sphere
+public class Sphere : IRayIntersect
 {
     public Vector3 center;
     public float radius;
